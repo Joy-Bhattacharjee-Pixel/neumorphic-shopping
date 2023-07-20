@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "106821068830",
+    "project_id": "be-casual",
+    "storage_bucket": "be-casual.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:106821068830:android:4cd0caf2887c5f0973260f",
+        "android_client_info": {
+          "package_name": "com.becasual.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "106821068830-lt3iq829id79m8pdrqbe1pekf6ul36ss.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.becasual.app",
+            "certificate_hash": "f9057f5207bb02d77f1381d74a469604840c9f34"
+          }
+        },
+        {
+          "client_id": "106821068830-q4i4dl63n22t614im8pkmlsvdg36c1ob.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9U8etidyvaR3N6zDEDc8JeIFmfBYAr5M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "106821068830-q4i4dl63n22t614im8pkmlsvdg36c1ob.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

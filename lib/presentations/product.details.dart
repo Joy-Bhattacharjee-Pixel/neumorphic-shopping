@@ -40,19 +40,19 @@ class _ProductDetailsState extends State<ProductDetails> {
                     child: NeumorphicRadio(
                       onChanged: (value) {},
                       style: NeumorphicRadioStyle(
-                          selectedColor: ColorModel.neumorphicColor,
+                          selectedColor: AppColors.neumorphicColor,
                           selectedDepth: -10.0,
                           unselectedDepth: 5.0,
                           intensity: 2.0,
                           shape: NeumorphicShape.concave,
-                          unselectedColor: ColorModel.neumorphicColor),
+                          unselectedColor: AppColors.neumorphicColor),
                       // value: 1,
                       // groupValue: 1,
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Icon(
                           Icons.favorite,
-                          color: ColorModel.purple,
+                          color: AppColors.purple,
                           size: 20.0,
                         ),
                       ),
@@ -76,7 +76,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                       child: Neumorphic(
                         style: NeumorphicStyle(
                             depth: 1.0,
-                            color: ColorModel.purple,
+                            color: AppColors.purple,
                             shape: NeumorphicShape.concave,
                             boxShape: NeumorphicBoxShape.roundRect(
                                 BorderRadius.circular(5.0))),
@@ -92,7 +92,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                       child: Neumorphic(
                         style: NeumorphicStyle(
                             depth: 1.0,
-                            color: ColorModel.neumorphicColor,
+                            color: AppColors.neumorphicColor,
                             shape: NeumorphicShape.concave,
                             boxShape: NeumorphicBoxShape.roundRect(
                                 BorderRadius.circular(5.0))),
@@ -114,7 +114,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                   style: TextStyle(
                       fontSize: 17.0,
                       color: Colors.black,
-                      fontFamily: Fonts.medium),
+                      ),
                 ),
               ),
             ),
@@ -130,7 +130,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                   style: TextStyle(
                       fontSize: 25.0,
                       color: Colors.black,
-                      fontFamily: Fonts.semiBold),
+                      ),
                 ),
               ),
             ),
@@ -162,7 +162,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                   style: TextStyle(
                       fontSize: 17.0,
                       color: Colors.black,
-                      fontFamily: Fonts.medium),
+                      ),
                 ),
               ),
             ),
@@ -179,19 +179,19 @@ class _ProductDetailsState extends State<ProductDetails> {
                   itemAdded += 1;
                   setState(() {});
                   Get.snackbar("title", "",
-                  backgroundColor: ColorModel.purple.withOpacity(0.1),
-                  messageText: const SizedBox(),
+                      backgroundColor: AppColors.purple.withOpacity(0.1),
+                      messageText: const SizedBox(),
                       titleText: Center(
                           child: Text(
                         "Item added in the cart",
                         style: TextStyle(
                             fontSize: 14.0,
                             color: Colors.black,
-                            fontFamily: Fonts.semiBold),
+                            ),
                       )));
                 },
                 style: NeumorphicStyle(
-                    color: ColorModel.neumorphicColor,
+                    color: AppColors.neumorphicColor,
                     depth: 3,
                     intensity: 5.0,
                     boxShape: NeumorphicBoxShape.roundRect(
@@ -199,11 +199,11 @@ class _ProductDetailsState extends State<ProductDetails> {
                     shape: NeumorphicShape.concave),
                 child: Center(
                     child: Text(
-                itemAdded==0?  "Add to cart":"Go to cart",
+                  itemAdded == 0 ? "Add to cart" : "Go to cart",
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 16.0,
-                      fontFamily: Fonts.medium),
+                      ),
                 )),
               ),
             ),
@@ -240,8 +240,8 @@ class _ProductDetailsState extends State<ProductDetails> {
                   selectedDepth: 5.0,
                   intensity: 5.0,
                   shape: NeumorphicShape.concave,
-                  selectedColor: ColorModel.neumorphicColor,
-                  unselectedColor: ColorModel.neumorphicColor),
+                  selectedColor: AppColors.neumorphicColor,
+                  unselectedColor: AppColors.neumorphicColor),
               value: index,
               groupValue: selectedSize,
               child: Padding(
@@ -251,8 +251,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                     text ?? "",
                     style: TextStyle(
                         fontSize: 13.0,
-                        color: Colors.black,
-                        fontFamily: Fonts.medium),
+                        color: Colors.black),
                   )))),
         ),
       );
@@ -267,9 +266,9 @@ class _ProductDetailsState extends State<ProductDetails> {
         title: Text(
           "Products",
           style: TextStyle(
-              fontSize: 20.0, color: Colors.black, fontFamily: Fonts.medium),
+              fontSize: 20.0, color: Colors.black, ),
         ),
-        backgroundColor: ColorModel.neumorphicColor,
+        backgroundColor: AppColors.neumorphicColor,
         elevation: 0.0,
         actions: [actionFilterIcon],
       );
@@ -282,9 +281,8 @@ class _ProductDetailsState extends State<ProductDetails> {
           padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
           onPressed: () {},
           style: NeumorphicStyle(
-              color: itemAdded == 0
-                  ? ColorModel.neumorphicColor
-                  : ColorModel.purple,
+              color:
+                  itemAdded == 0 ? AppColors.neumorphicColor : AppColors.purple,
               depth: 3.5,
               boxShape:
                   NeumorphicBoxShape.roundRect(BorderRadius.circular(5.0)),
@@ -299,7 +297,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                     style: TextStyle(
                         fontSize: 10.0,
                         height: 0.5,
-                        fontFamily: Fonts.semiBold,
+                        
                         color: itemAdded == 0 ? Colors.black : Colors.white),
                   ),
                 ),
@@ -330,7 +328,7 @@ class _ProductDetailsState extends State<ProductDetails> {
 
   // Leading icon style
   NeumorphicStyle get leadingStyle => NeumorphicStyle(
-      color: ColorModel.neumorphicColor,
+      color: AppColors.neumorphicColor,
       depth: 3.5,
       boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(5.0)),
       shape: NeumorphicShape.concave);

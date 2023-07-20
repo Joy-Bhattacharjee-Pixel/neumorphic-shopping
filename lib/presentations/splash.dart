@@ -31,10 +31,7 @@ class SplashScreen extends StatelessWidget {
             //       image: AssetImage("assets/Logo Original Colour.png"))
             Text(
               "Pixel Consultancy",
-              style: TextStyle(
-                  fontSize: 22.0,
-                  fontFamily: Fonts.medium,
-                  color: const Color(0xFF815BE3)),
+              style: TextStyle(fontSize: 22.0, color: const Color(0xFF815BE3)),
             )
           ],
         ),
@@ -78,7 +75,7 @@ class SplashScreen extends StatelessWidget {
       intensity: 2,
       depth: -3,
       boxShape: commonBoxShape,
-      color: ColorModel.neumorphicColor);
+      color: AppColors.neumorphicColor);
   // Common box shape
   NeumorphicBoxShape get commonBoxShape => const NeumorphicBoxShape.circle();
 }

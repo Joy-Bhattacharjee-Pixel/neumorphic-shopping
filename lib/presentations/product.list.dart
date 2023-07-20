@@ -75,7 +75,7 @@ class _ProductListState extends State<ProductList> {
                     style: TextStyle(
                         fontSize: 14.0,
                         color: Colors.black,
-                        fontFamily: Fonts.medium),
+                        ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 8.0),
@@ -87,7 +87,7 @@ class _ProductListState extends State<ProductList> {
                           style: TextStyle(
                               fontSize: 16.0,
                               color: Colors.black,
-                              fontFamily: Fonts.bold),
+                              ),
                         ),
                         Row(
                           children: [
@@ -97,15 +97,15 @@ class _ProductListState extends State<ProductList> {
                               child: Icon(
                                 Feather.star,
                                 size: 12.0,
-                                color: ColorModel.purple,
+                                color: AppColors.purple,
                               ),
                             ),
                             Text(
                               productModel.rating!,
                               style: TextStyle(
                                   fontSize: 12.0,
-                                  color: ColorModel.purple,
-                                  fontFamily: Fonts.medium),
+                                  color: AppColors.purple,
+                                  ),
                             ),
                           ],
                         )
@@ -137,14 +137,14 @@ class _ProductListState extends State<ProductList> {
                   setState(() {});
                 },
                 style: NeumorphicRadioStyle(
-                    selectedColor: ColorModel.neumorphicColor,
+                    selectedColor: AppColors.neumorphicColor,
                     selectedDepth: -10.0,
                     unselectedDepth: 5.0,
                     intensity: 2.0,
                     shape: selectedFavs.contains(index)
                         ? NeumorphicShape.concave
                         : NeumorphicShape.convex,
-                    unselectedColor: ColorModel.neumorphicColor),
+                    unselectedColor: AppColors.neumorphicColor),
                 // value: 1,
                 // groupValue: 1,
                 child: Padding(
@@ -152,7 +152,7 @@ class _ProductListState extends State<ProductList> {
                   child: Icon(
                     Icons.favorite,
                     color: selectedFavs.contains(index)
-                        ? ColorModel.purple
+                        ? AppColors.purple
                         : Colors.grey,
                     size: 18.0,
                   ),
@@ -165,7 +165,7 @@ class _ProductListState extends State<ProductList> {
 
   // Product tile style
   NeumorphicStyle get productTileStyle => NeumorphicStyle(
-        color: ColorModel.neumorphicColor,
+        color: AppColors.neumorphicColor,
         border: NeumorphicBorder(color: Colors.grey.shade200),
         boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(10.0)),
         shape: NeumorphicShape.concave,
@@ -175,7 +175,7 @@ class _ProductListState extends State<ProductList> {
   Widget get appBar => AppBar(
         leading: leadingIcon,
         leadingWidth: 60.0,
-        backgroundColor: ColorModel.neumorphicColor,
+        backgroundColor: AppColors.neumorphicColor,
         elevation: 0.0,
         actions: [actionFilterIcon],
       );
@@ -186,8 +186,7 @@ class _ProductListState extends State<ProductList> {
         child: NeumorphicButton(
           margin: const EdgeInsets.all(0.0),
           padding: const EdgeInsets.all(10.0),
-          onPressed: () {
-          },
+          onPressed: () {},
           style: leadingStyle,
           child: const Icon(Feather.filter, color: Colors.black87, size: 18.0),
         ),
@@ -208,7 +207,7 @@ class _ProductListState extends State<ProductList> {
 
   // Leading icon style
   NeumorphicStyle get leadingStyle => NeumorphicStyle(
-      color: ColorModel.neumorphicColor,
+      color: AppColors.neumorphicColor,
       depth: 3.5,
       boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(5.0)),
       shape: NeumorphicShape.concave);

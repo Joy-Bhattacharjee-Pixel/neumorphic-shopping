@@ -1,4 +1,4 @@
-package com.example.shopping_neumorphic
+package com.becasual.app
 
 import io.flutter.embedding.android.FlutterActivity
 
