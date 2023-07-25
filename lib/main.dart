@@ -5,6 +5,7 @@ import 'package:shopping_neumorphic/models/color.model.dart';
 import 'package:shopping_neumorphic/models/font.model.dart';
 import 'package:shopping_neumorphic/presentations/authentication/mobile.number.dart';
 import 'package:shopping_neumorphic/presentations/authentication/register.dart';
+import 'package:shopping_neumorphic/presentations/common.scaffold/common.scaffold.dart';
 import 'package:shopping_neumorphic/presentations/splash.dart';
 
 void main() async {
@@ -25,8 +26,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
             primaryColor: AppColors.purple,
             fontFamily: Fonts.regular,
-            scaffoldBackgroundColor: Colors.white,
+            scaffoldBackgroundColor: AppColors.neumorphicColor,
             useMaterial3: true),
-        home: SplashScreen());
+        home: CommonScaffold());
   }
 }

@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'dart:developer';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -169,6 +168,7 @@ class AuthController extends GetxController {
         "email": emailController.text.trim(),
         "password": passwordController.text.trim()
       };
+
       try {
         // Trying to login using email and password
         final docId = await AuthServices.login(credential: credential);
@@ -183,14 +183,26 @@ class AuthController extends GetxController {
           // Customer name
           final customerName = customerData["name"];
 
+          // Parsing customer json
+          final customerJsonString = jsonEncode(customerData);
+
+          // Saving customer data
+          saveCookie(key: "customer", value: customerJsonString);
+
+          // Saving customer doc id
+          saveCookie(key: "docId", value: docId);
+
+          // Showing logged in successful message
           FlashMessage.show(
               title: "Welcome back, ${customerName}",
               message: "Logged in successfully",
               isSuccess: true);
 
+          // Navigating to dashboard
           Get.to(() => Dashboard());
         }
       } catch (e) {}
+      // logged in successfully
       loginButtonLoading(false);
     }
   }
